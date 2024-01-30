@@ -1,0 +1,17 @@
+create database DBCSperson_infor;
+show databases;
+use DBCSperson_infor;
+show tables;
+create table CSuserlogin(userid int(9) unsigned auto_increment primary key not null, username varchar(50) not null,password varchar(50) not null);
+desc csuserlogin;
+insert into csuserlogin(username,password) value('Jitdumrong Preechasuk','12345');
+insert into csuserlogin(username,password) value('Ratchadaporn Kanawong','654321');
+insert into csuserlogin(username,password) value('Data Science','01030507');
+insert into csuserlogin(username,password) value('Computer Science','12131415');
+insert into csuserlogin(username,password) value('Information Engineering','34567890');
+select * from csuserlogin;
+select * from csuserlogin where userid = '2';
+select * from csuserlogin where username = 'Computer Science';
+select userid , username from csuserlogin where username = 'Computer Science' or username = 'Information Engineering';
+select username, password from csuserlogin where username = 'Information Engineering' or username = 'Data Science';
+select userid, username from csuserlogin where userid >= 3 and userid <= 5;

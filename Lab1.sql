@@ -1,0 +1,11 @@
+create database DBCSuseraccount;
+use DBCSuseraccount;
+show tables;
+create table DBCSuser(userid int(11) unsigned auto_increment primary key not null,username varchar(20) not null,passwd varchar(20) not null);
+show tables;
+desc dbcsuser;
+create table DBCSuser_detail(userid int(11) unsigned auto_increment primary key not null,username varchar(20) not null,useraddr varchar(150) not null,usermobile varchar(10) not null,email varchar(50) not null);
+show tables;
+desc DBCSuser_detail;
+drop  table  DBCSuser_detail;
+show tables;
